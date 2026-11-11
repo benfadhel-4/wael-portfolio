@@ -6,7 +6,7 @@ export default function About({ t }) {
           <p className="section-label">
             <span>01</span> / {t.aboutLabel}
           </p>
-          <h2>{t.aboutTitle}</h2>
+          {/* <h2>{t.aboutTitle}</h2> */}
         </div>
 
         <div className="about-grid">

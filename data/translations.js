@@ -34,8 +34,7 @@ export const copy = {
       "Une base solide en développement backend, données et interfaces web.",
     projectsLabel: "PROJETS",
     projectsTitle: "Quelques domaines sur lesquels j'ai travaillé",
-    projectsIntro:
-      "Sélection de projets et de réalisations représentatifs. Les détails confidentiels de l'entreprise ne sont pas publiés.",
+    projectsIntro: "",
     project1: "Suivi de production textile",
     project1desc:
       "Applications métier pour le suivi des ordres de fabrication, des opérations de coupe, de stock et de facturation.",
@@ -100,11 +99,11 @@ export const copy = {
     email: "Votre e-mail",
     message: "Votre message",
     send: "Envoyer un e-mail",
-    footer: "Conçu avec soin · Next.js & React",
+    footer: " · Next.js & React",
     cvNote:
       "Téléchargez mon CV pour découvrir mon parcours professionnel et mes compétences.",
     featured: "SÉLECTION",
-    details: "À présenter en entretien",
+    details: "VOIR LA GALERIE",
     downloadCv: "Télécharger mon CV",
   },
   en: {
@@ -209,11 +208,11 @@ export const copy = {
     email: "Your email",
     message: "Your message",
     send: "Send an email",
-    footer: "Made with care · Next.js & React",
+    footer: " ·  Next.js & React",
     cvNote:
       "Download my CV to explore my professional experience and technical skills.",
     featured: "SELECTED",
-    details: "Discuss in interview",
+    details: "CLICK TO VIEW GALLERY",
     downloadCv: "Download my CV",
   },
 };

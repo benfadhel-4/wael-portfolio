@@ -1,26 +1,40 @@
+"use client";
+
 import { ArrowUpRight, Languages, Menu, X } from "lucide-react";
 
-export default function Navbar({ lang, setLang, menuOpen, setMenuOpen, t }) {
+export default function Navbar({
+  lang,
+  setLang,
+  menuOpen,
+  setMenuOpen,
+  t,
+  navigateTo,
+}) {
   const navIds = ["about", "experience", "skills", "projects", "contact"];
 
   return (
     <header className="header">
-      <a className="brand" href="#home" aria-label="Wael BEN FADHEL home">
+      <button
+        type="button"
+        className="brand"
+        onClick={() => navigateTo("home")}
+        aria-label="Wael BEN FADHEL home"
+      >
         <span className="brand-mark">WB</span>
         <span>
           Wael<span className="brand-dot">.</span>
         </span>
-      </a>
+      </button>
 
       <nav className={menuOpen ? "nav nav-open" : "nav"}>
         {t.nav.map((item, i) => (
-          <a
+          <button
+            type="button"
             key={item}
-            href={`#${navIds[i]}`}
-            onClick={() => setMenuOpen(false)}
+            onClick={() => navigateTo(navIds[i])}
           >
             {item}
-          </a>
+          </button>
         ))}
       </nav>
 
@@ -34,9 +48,13 @@ export default function Navbar({ lang, setLang, menuOpen, setMenuOpen, t }) {
           {lang === "fr" ? "EN" : "FR"}
         </button>
 
-        <a className="header-contact" href="#contact">
+        <button
+          type="button"
+          className="header-contact"
+          onClick={() => navigateTo("contact")}
+        >
           {t.ctaContact} <ArrowUpRight size={15} />
-        </a>
+        </button>
 
         <button
           className="menu-toggle"

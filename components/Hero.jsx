@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import {
   ArrowDownRight,
   ArrowUpRight,
@@ -6,7 +9,37 @@ import {
   MapPin,
 } from "lucide-react";
 
-export default function Hero({ t }) {
+export default function Hero({ t, lang }) {
+  const [showScrollCue, setShowScrollCue] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const aboutSection = document.getElementById("about");
+
+      if (aboutSection) {
+        const aboutTop = aboutSection.offsetTop - window.innerHeight / 2;
+        setShowScrollCue(scrollY > 100 && scrollY < aboutTop);
+      } else {
+        setShowScrollCue(scrollY > 100 && scrollY < 600);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  // Dynamic text based on current language
+  const scrollText =
+    t.scrollExplore || (lang === "fr" ? "DÉCOUVRIR" : "SCROLL TO EXPLORE");
+
   return (
     <section className="hero section-wrap" id="home">
       <div className="hero-copy">
@@ -88,10 +121,16 @@ export default function Hero({ t }) {
         <div className="art-caption">BUILD · IMPROVE · DELIVER</div>
       </div>
 
-      <a className="scroll-cue" href="#about">
+      {/* Floating Centered Button */}
+      <button
+        type="button"
+        className={`scroll-cue ${showScrollCue ? "visible" : ""}`}
+        onClick={scrollToAbout}
+        aria-label="Scroll to about section"
+      >
         <span />
-        SCROLL TO EXPLORE
-      </a>
+        {scrollText}
+      </button>
     </section>
   );
 }

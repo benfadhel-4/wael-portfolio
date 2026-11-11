@@ -19,6 +19,15 @@ export default function Home() {
   const [lang, setLang] = useState("fr");
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const navigateTo = (section) => {
+    document.getElementById(section)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+
+    setMenuOpen(false);
+  };
+
   const t = copy[lang];
 
   return (
@@ -29,9 +38,10 @@ export default function Home() {
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
         t={t}
+        navigateTo={navigateTo}
       />
 
-      <Hero t={t} />
+      <Hero t={t} lang={lang} />
 
       <About t={t} />
 

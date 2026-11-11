@@ -8,7 +8,7 @@ export default function Experience({ t, lang }) {
           <p className="section-label">
             <span>02</span> / {t.experienceLabel}
           </p>
-          <h2>{t.experienceTitle}</h2>
+          {/* <h2>{t.experienceTitle}</h2> */}
         </div>
 
         <article className="experience-card">

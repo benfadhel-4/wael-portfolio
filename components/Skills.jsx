@@ -13,7 +13,7 @@ export default function Skills({ t, lang }) {
             <span>03</span> / {t.skillsLabel}
           </p>
 
-          <h2>{t.skillsTitle}</h2>
+          {/* <h2>{t.skillsTitle}</h2> */}
 
           <p className="section-description">{t.skillsIntro}</p>
         </div>
