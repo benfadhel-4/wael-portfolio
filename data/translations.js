@@ -32,21 +32,25 @@ export const copy = {
     skillsTitle: "Mes outils au quotidien",
     skillsIntro:
       "Une base solide en développement backend, données et interfaces web.",
-    projectsLabel: "PROJETS",
+    projectsLabel: "PROJETS RÉALISÉS",
     projectsTitle: "Quelques domaines sur lesquels j'ai travaillé",
     projectsIntro: "",
-    project1: "Suivi de production textile",
+    project1: "Gestion de la production textile & Coupe",
     project1desc:
-      "Applications métier pour le suivi des ordres de fabrication, des opérations de coupe, de stock et de facturation.",
-    project2: "Intégration API & synchronisation",
+      "Solution logicielle dédiée à la numérisation de l'atelier de coupe : suivi des ordres de fabrication (OF), gestion des stocks de matière et traçabilité de la facturation.",
+    project2: "Intégration API & Synchronisation de Données",
     project2desc:
-      "Récupération de données depuis des services externes, traitement et synchronisation vers une base interne.",
-    project3: "Reporting & données industrielles",
+      "Développement de services d'intégration REST API pour l'interconnexion des systèmes externes avec les bases de données internes et l'automatisation des échanges de données.",
+    project3: "Reporting Industriel & Optimisation SQL",
     project3desc:
-      "Rapports opérationnels, génération de PDF et optimisation SQL pour rendre les données plus accessibles.",
-    project4: "Tableaux de bord de consommation",
+      "Conception de rapports opérationnels, génération de documents PDF et optimisation de requêtes SQL pour améliorer les performances d'accès aux données.",
+    project4: "Monitoring Industriel & Consommations",
     project4desc:
-      "Collecte et présentation de données industrielles liées aux compteurs et à la consommation des équipements.",
+      "Développement d'une solution de collecte, de traitement et de visualisation des données issues des compteurs énergétiques pour assurer le suivi et l'analyse des consommations industrielles.",
+    project5: "Gestion & Suivi des Exportations",
+    project5desc:
+      "Développement d'une application web dédiée à la gestion des opérations d'exportation, incluant la facturation, le suivi logistique et la préparation des dossiers d'export.",
+
     educationLabel: "FORMATION",
     educationTitle: "Parcours & Certifications",
     educationTab: "Formation académique",
@@ -139,22 +143,26 @@ export const copy = {
     skillsTitle: "Tools I work with",
     skillsIntro:
       "A strong foundation in backend development, data, and web interfaces.",
-    projectsLabel: "PROJECTS",
-    projectsTitle: "Areas I've worked on",
-    projectsIntro:
-      "A selection of representative project areas. Confidential company details are not published.",
-    project1: "Textile production tracking",
+    projectsLabel: "SELECTED PROJECTS",
+    projectsTitle: "Business Solutions & Information Systems",
+    projectsIntro: " ",
+    // "Design and development of software solutions for industrial processes, operational monitoring, and data integration.",
+    project1: "Textile Production & Cutting Management",
     project1desc:
-      "Business applications for tracking manufacturing orders, cutting operations, inventory, and invoicing.",
-    project2: "API integration & synchronisation",
+      "Development of business applications for tracking manufacturing orders, managing cutting operations, inventory, and invoicing processes.",
+    project2: "API Integration & Data Synchronization",
     project2desc:
-      "Retrieving data from external services, processing it, and synchronising it with an internal database.",
-    project3: "Industrial reporting & data",
+      "Development of REST API integration services to connect external systems with internal databases and automate data exchange processes.",
+    project3: "Industrial Reporting & SQL Optimization",
     project3desc:
-      "Operational reports, PDF generation, and SQL optimisation to make business data easier to use.",
-    project4: "Consumption dashboards",
+      "Development of operational reports, dynamic PDF generation, and SQL query optimization to improve data access performance.",
+    project4: "Industrial Monitoring & Energy Consumption",
     project4desc:
-      "Collecting and presenting industrial data related to meters and equipment consumption.",
+      "Development of a solution for collecting, processing, and visualizing data from industrial energy meters to monitor and analyze energy consumption.",
+    project5: "Export Management & Tracking",
+    project5desc:
+      "Development of a web application dedicated to export operations management, covering invoicing, logistics tracking, and export documentation preparation.",
+
     educationLabel: "EDUCATION",
     educationTitle: "Academic Background & Certifications",
     educationTab: "Academic Education",

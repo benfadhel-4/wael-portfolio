@@ -7,11 +7,17 @@ import {
   Code2,
   Database,
   MapPin,
+  navigateTo,
 } from "lucide-react";
 
 export default function Hero({ t, lang }) {
   const [showScrollCue, setShowScrollCue] = useState(false);
-
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -65,13 +71,21 @@ export default function Hero({ t, lang }) {
         <p className="hero-intro">{t.intro}</p>
 
         <div className="hero-buttons">
-          <a className="button button-primary" href="#projects">
+          <button
+            type="button"
+            className="button button-primary"
+            onClick={() => scrollToSection("projects")}
+          >
             {t.ctaProjects} <ArrowDownRight size={17} />
-          </a>
+          </button>
 
-          <a className="button button-ghost" href="#contact">
-            {t.ctaContact} <ArrowUpRight size={16} />
-          </a>
+          <button
+            type="button"
+            className="button button-ghost"
+            onClick={() => scrollToSection("contact")}
+          >
+            {t.ctaContact} <ArrowDownRight size={16} />
+          </button>
         </div>
 
         <p className="hero-location">
